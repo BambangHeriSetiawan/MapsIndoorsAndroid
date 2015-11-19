@@ -1,0 +1,54 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'http://maven.mapsindoors.com/' }
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+android {
+    signingConfigs {
+        config {
+            //keyAlias 'default'
+            //keyPassword 'password'
+            //storeFile file('C:/_/YourKeyStoreFile.jks')
+            //storePassword 'password'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId "com.mapsindoors.mapsindoorsdemo"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.2.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.google.android.gms:play-services-maps:8.3.0'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'org.altbeacon:android-beacon-library:2.7'
+    compile 'com.mapspeople.mapsindoors:mapsindoorssdk:1.2.19@aar'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') { transitive = true; }
+}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/mainlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false">
+
+        <fragment android:id="@+id/mapfragment"
+                  android:name="com.google.android.gms.maps.SupportMapFragment"
+                  xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:clickable="true"
+                  tools:context=".MapsIndoorsActivity"
+                  tools:layout="@layout/mainmenuitem"/>
+
+        <fragment android:id="@+id/overlayfragment"
+                  android:name="com.mapsindoors.mapsindoorsdemo.fragment.OverlayFragment"
+                  xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:clickable="true"
+                  tools:context=".MapsIndoorsActivity"
+                  tools:layout="@layout/overlay_layout"/>
+
+        <fragment android:id="@+id/directionsmenufragment"
+                  android:name="com.mapsindoors.mapsindoorsdemo.fragment.DirectionsmenuFragment"
+                  xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:clickable="true"
+                  tools:context=".MapsIndoorsActivity"
+                  tools:layout="@layout/directionsmenu"/>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.Android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.Android.com/apk/res-auto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.95"
+                android:background="@color/primary"
+                android:visibility="visible"
+                app:contentInsetEnd="0dp"
+                app:contentInsetStart="0dp"
+                android:layout_alignParentTop="true"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/menuframe"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:clickable="false"
+            >
+
+            <fragment android:id="@+id/menufragment"
+                      android:name="com.mapsindoors.mapsindoorsdemo.fragment.MenuFragment"
+                      xmlns:android="http://schemas.android.com/apk/res/android"
+                      xmlns:tools="http://schemas.android.com/tools"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:clickable="false"
+                      tools:context=".MapsIndoorsActivity"
+                      tools:layout="@layout/mainmenu"/>
+
+            <fragment android:id="@+id/locationmenufragment"
+                      android:name="com.mapsindoors.mapsindoorsdemo.fragment.LocationMenuFragment"
+                      xmlns:android="http://schemas.android.com/apk/res/android"
+                      xmlns:tools="http://schemas.android.com/tools"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:clickable="false"
+                      tools:context=".MapsIndoorsActivity"
+                      tools:layout="@layout/locationmenu"/>
+        </FrameLayout>
+    </android.support.v4.widget.DrawerLayout>
+</FrameLayout>
