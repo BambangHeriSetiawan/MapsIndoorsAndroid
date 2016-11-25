@@ -25,7 +25,6 @@ import android.widget.TextView;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.mapsindoors.MapsIndoorsActivity;
-import com.mapsindoors.SpeakHelper;
 import com.mapsindoors.listener.DirectionsMenuListener;
 import com.mapsindoors.R;
 import com.mapsindoors.listener.LocationFoundListener;
@@ -81,7 +80,6 @@ public class DirectionsfullmenuFragment extends Fragment implements OnLegSelecte
 	private Location destination;
 	private enum vehicle {walk, bicycle, transit, car}
 	private vehicle currentVehicle = vehicle.walk;
-	private SpeakHelper speakHelper;
 
 	public DirectionsfullmenuFragment()
 	{
@@ -92,7 +90,6 @@ public class DirectionsfullmenuFragment extends Fragment implements OnLegSelecte
 	public void init(final Context context, DirectionsMenuListener menuListener, final MapControl mapControl)
 	{
 		this.context = context;
-		speakHelper = new SpeakHelper(context);
 		final MapsIndoorsActivity activity = (MapsIndoorsActivity)context;
 		this.menuListener = menuListener;
 		this.mapControl = mapControl;
