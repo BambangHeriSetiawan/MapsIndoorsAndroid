@@ -1,24 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">MapsIndoorsDemo</string>
-    <string name="title_activity_maps_indoors">MapsIndoors Demo</string>
-    <string name="search_places">Search places&#8230;</string>
+  <string name="app_name">Mapsindoors</string>
+  <string name="title_activity_maps_indoors">Mapsindoors</string>
+  <string name="search_places">Search places&#8230;</string>
     <string name="desc"></string>
     <string name="cancel">Cancel</string>
     <string name="ab_find_nearest">FIND NEAREST</string>
     <string name="title_activity_directions">DirectionsActivity</string>
     <string name="directions_routeto">Route to:</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="sample_text">Sample Text</string>
-    <string name="show_on_map">SHOW ON MAP</string>
+    <string name="show_on_map">Show on map</string>
     <string name="route">ROUTE</string>
     <string name="previous">PREVIOUS</string>
     <string name="next">NEXT</string>
     <string name="you_are_here">YOU ARE HERE</string>
+    <string name="estimated_position_near">Estimated position</string>
     <string name="destination">DESTINATION</string>
-    <string name="enter_venue">Enter venue</string>
     <string name="stairs_level">STAIRS LEVEL </string>
     <string name="elevator_level">ELEVATOR LEVEL </string>
+    <string name="Location_title">LOCATION</string>
+    <string name="search_for">Search for</string>
+    <string name="context_OutsideOnVenue">ENTER BUILDING</string>
+    <string name="context_InsideBuilding">INSIDE</string>
+    <string name="avoid_stairs">Avoid stairs</string>
+    <string name="my_position">MY POSITION</string>
+    <string name="directions">Directions</string>
+    <string name="walk_outside">Walk outside</string>
+    <string name="walk_inside">Walk inside</string>
+    <string name="by_walk">walk</string>
+    <string name="by_drive">drive</string>
+    <string name="minutes">min</string>
+    <string name="hour">hr</string>
+    <string name="finding_route">Finding route..</string>
+    <string name="level">Level</string>
+    <string name="building">Building</string>
+    <string name="No_POIs_found">No POIs found near you in category: </string>
 </resources>

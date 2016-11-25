@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="@android:color/transparent"
+              android:layout_width="match_parent"
+              android:layout_height="128dp"
+              android:focusable="false"
+              android:orientation="horizontal"
+              android:gravity="center_vertical"
+              android:minHeight="48dp"
+    >
+
+    <FrameLayout
+        android:orientation="vertical"
+        android:layout_width="56dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="64dp"
+            android:id="@+id/imageViewBlueLine"
+            android:background="@android:color/transparent"
+            android:src="@drawable/line_v"
+            android:tint="@color/primary"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:cropToPadding="true"
+            android:adjustViewBounds="false"
+            android:alpha="0.5"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="64dp">
+
+            <FrameLayout
+                android:layout_width="56dp"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/fromImageButton"
+                    android:src="@drawable/menu_placeholder"
+                    android:background="@android:color/transparent"
+                    />
+
+                <ImageButton
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/fromIconImageButton"
+                    android:src="@drawable/level_staircase"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_gravity="bottom">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_width="56dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/toImageButton"
+                    android:src="@drawable/menu_placeholder"
+                    android:background="@android:color/transparent"
+                    />
+
+                <ImageButton
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:id="@+id/toIconImageButton"
+                    android:src="@drawable/dest_icon"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"/>
+            </FrameLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/fromEditText"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/toEditText"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="4dp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

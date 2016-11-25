@@ -1,45 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/locationmenu"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/locationmenu_title"
     android:background="#00FFFFFF"
     android:clickable="true"
-    android:layout_width="match_parent"
+    android:layout_width="330dp"
     android:layout_height="match_parent"
     style="@android:style/Widget.ScrollView"
-    android:visibility="gone">
+    >
     <RelativeLayout
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
         android:id="@+id/menuheader">
 
-        <ImageView
-            android:id="@+id/topimage"
-            android:contentDescription="@string/desc"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="120dp"
-            android:scaleType="fitXY"
-            android:background="@color/primary" />
+            android:nestedScrollingEnabled="false"
+            android:id="@+id/directionsfullmenu_searchbar">
 
-        <FrameLayout
-            android:id="@+id/locations_backbutton_frame"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_below="@+id/topimage"
-            android:background="#FFF0F0F0">
+            <ImageView
+                android:id="@+id/topimage"
+                android:contentDescription="@string/desc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:background="@color/primary"
+                android:visibility="visible"
+                />
+
+            <ImageButton
+                android:id="@+id/imageShadow"
+                android:contentDescription="@string/desc"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:visibility="visible"
+                android:clickable="false"
+                android:src="@drawable/back"
+                android:tint="#000000"
+                android:background="@android:color/transparent"
+                android:layout_gravity="left|top"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:alpha="0.5"/>
+
             <ImageButton
                 android:id="@+id/locations_backbutton"
                 android:contentDescription="@string/desc"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:visibility="visible"
                 android:clickable="true"
-                android:layout_margin="16dp"
                 android:src="@drawable/back"
-                android:tint="@color/primary"
+                android:tint="#FFFFFF"
                 android:background="@android:color/transparent"
-                android:layout_gravity="center_vertical"/>
+                android:layout_gravity="left|top"
+                />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="@string/desc">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageViewLogo"
+                    android:layout_gravity="center"
+                    android:src="@drawable/menu_placeholder"
+                    android:contentDescription="@string/desc"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:text="@string/Location_title"
+                    android:id="@+id/locationTitleId"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/white"
+                    />
+
+            </LinearLayout>
+
         </FrameLayout>
 
         <ListView
@@ -50,14 +99,14 @@
             android:background="@android:color/transparent"
             android:dividerHeight="0dp"
             android:divider="#00FFFFFF"
-            android:layout_below="@+id/locations_backbutton_frame"
             android:layout_above="@+id/directionslayout_buttongrid"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"/>
+            tools:listitem="@layout/mainmenuitem"
+            android:layout_below="@+id/directionsfullmenu_searchbar"
+            />
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:background="#FFF0F0F0"
+            android:background="@android:color/transparent"
             android:orientation="horizontal"
             android:id="@+id/directionslayout_buttongrid"
             android:columnCount="2"
@@ -94,5 +143,6 @@
                 android:layout_gravity="center_vertical"
                 android:backgroundTint="@color/accent"/>
         </GridLayout>
+
     </RelativeLayout>
 </LinearLayout>

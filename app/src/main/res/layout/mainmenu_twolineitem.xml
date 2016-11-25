@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:background="#FFFFFF"
+              android:layout_width="330dp"
+              android:layout_height="60dp"
+              android:focusable="false"
+              android:orientation="horizontal"
+              android:gravity="center_vertical"
+                android:minHeight="48dp">
+
+    <FrameLayout
+        android:layout_width="72dp"
+        android:layout_height="60dp"
+        android:id="@+id/frameLayout"
+        >
+
+        <ImageView
+            android:id="@+id/iconitem"
+            android:contentDescription="@string/desc"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:visibility="visible"
+            android:src="@drawable/menu_placeholder"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <ImageView
+            android:id="@+id/iconitem_tint"
+            android:contentDescription="@string/desc"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="invisible"
+            android:src="@drawable/subfab_restroom"
+            android:tint="@color/primary"
+            android:scaleType="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/frameLayout"
+        android:id="@+id/linearLayout"
+        android:layout_toLeftOf="@+id/linearLayout2"
+        android:layout_toStartOf="@+id/linearLayout2"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/textitem_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="17A-1.10 Class room"
+            android:contentDescription="@string/desc"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="#FFFFFF"
+            android:textColor="#000000"
+            android:gravity="center_vertical"
+            android:fontFamily="@string/abc_font_family_menu_material"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/textitem_sub"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="02 Windsløwparken, WP17A, 2 floor"
+            android:contentDescription="@string/desc"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:background="#FFFFFF"
+            android:gravity="center_vertical"
+            android:fontFamily="@string/abc_font_family_subhead_material"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:id="@+id/linearLayout2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:id="@+id/imageViewDirections"
+            android:src="@android:drawable/ic_menu_directions"
+            android:contentDescription="@string/desc"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="50m"
+            android:id="@+id/textitem_dist"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/desc"
+            android:textSize="13sp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Mapsindoors</string>
+  <string name="title_activity_maps_indoors">Mapsindoors</string>
+  <string name="search_places">Søg&#8230;</string>
+    <string name="desc"></string>
+    <string name="cancel">Annuller</string>
+    <string name="ab_find_nearest">FIND NÆRMESTE</string>
+    <string name="title_activity_directions">DirectionsActivity</string>
+    <string name="directions_routeto">Rute til:</string>
+    <string name="action_settings">Indstillinger</string>
+    <string name="sample_text">Sample Text</string>
+    <string name="show_on_map">Vis på kort</string>
+    <string name="route">RUTE</string>
+    <string name="previous">TIDLIGERE</string>
+    <string name="next">NÆSTE</string>
+    <string name="you_are_here">DU ER HER</string>
+    <string name="estimated_position_near">Estimeret position</string>
+    <string name="destination">DESTINATION</string>
+    <string name="stairs_level">TRAPPE ETAGE </string>
+    <string name="elevator_level">ELEVATOR ETAGE </string>
+    <string name="Location_title">STED</string>
+    <string name="search_for">Søg efter</string>
+    <string name="context_OutsideOnVenue">UDENFOR</string>
+    <string name="context_InsideBuilding">INDENFOR</string>
+    <string name="avoid_stairs">Undgå trapper</string>
+    <string name="my_position">MIN POSITION</string>
+    <string name="directions">Find vej</string>
+    <string name="walk_outside">Gå udenfor</string>
+    <string name="walk_inside">Gå indenfor</string>
+    <string name="by_walk">til fods</string>
+    <string name="by_drive">i bil</string>
+    <string name="minutes">min</string>
+    <string name="hour">t</string>
+    <string name="finding_route">Finder rute..</string>
+    <string name="level">Etage</string>
+    <string name="building">Bygning</string>
+    <string name="No_POIs_found">Ingen POI\'er fundet nær dig i kategori: </string>
+</resources>

@@ -50,8 +50,10 @@
         android:elevation="10dp"
         android:src="@drawable/subfab_restroom"
         android:layout_above="@+id/fabSearch"
-        android:layout_toRightOf="@+id/TextAct1"
-        android:layout_toEndOf="@+id/TextAct1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="22dp"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"/>
         android:visibility="invisible"/>
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/abutton2"
@@ -62,7 +64,7 @@
         app:backgroundTint="@color/white"
         app:pressedTranslationZ="12dp"
         android:elevation="10dp"
-        android:src="@drawable/subfab_steps"
+        android:src="@drawable/subfab_restaurants"
         android:layout_above="@+id/abutton1"
         android:layout_alignLeft="@+id/abutton1"
         android:layout_alignStart="@+id/abutton1"
@@ -76,7 +78,7 @@
         app:backgroundTint="@color/white"
         app:pressedTranslationZ="12dp"
         android:elevation="10dp"
-        android:src="@drawable/subfab_exit"
+        android:src="@drawable/subfab_information"
         android:layout_above="@+id/abutton1"
         android:layout_alignLeft="@+id/abutton1"
         android:layout_alignStart="@+id/abutton1"
