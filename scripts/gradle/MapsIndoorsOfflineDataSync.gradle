@@ -19,7 +19,7 @@ ext {
     SHOW_DEBUG_INFO = false
 
     // These reflect the settings in mapsindoors_api.xml
-    enableOfflineMode = false
+    enableOfflineMode = true
     embedDefaultLanguageDataOnly = false
     enableOfflineRouting = false
     enableOfflineTiles = false
@@ -115,23 +115,23 @@ task fetchData {
     doLast {
 
         // Check first if offline data has been enabled from the MapsIndoors API xml. Defaults to disabled
-        enableOfflineMode = isOfflineModeEnabled()
+        enableOfflineMode = isOfflineModeEnabled( enableOfflineMode )
         if (!enableOfflineMode)
         {
             return
         }
 
         //
-        embedDefaultLanguageDataOnly = isDefaultLanguageOnlySet(embedDefaultLanguageDataOnly)
+        embedDefaultLanguageDataOnly = isDefaultLanguageOnlySet( embedDefaultLanguageDataOnly )
 
         // Check if offline routing has been enabled. This will pull the graphs. Defaults to disabled
-        enableOfflineRouting = isRoutingEnabled(enableOfflineRouting)
+        enableOfflineRouting = isRoutingEnabled( enableOfflineRouting )
 
         // Check if offline tiles have been enabled. This will download the solution's tiles. Disabled by default
-        enableOfflineTiles = areOfflineTilesEnabled(enableOfflineTiles)
+        enableOfflineTiles = areOfflineTilesEnabled( enableOfflineTiles )
 
         // Check if offline locations have been enabled. By default, true if offline mode has been enabled
-        enableOfflineLocations = areOfflineLocationsDataEnabled(enableOfflineLocations)
+        enableOfflineLocations = areOfflineLocationsDataEnabled( enableOfflineLocations )
 
         mi_APIKey = getAPIKey()
 
@@ -399,9 +399,9 @@ def getAPIKey()
     return apiKey
 }
 
-boolean isOfflineModeEnabled()
+boolean isOfflineModeEnabled( defaultValue )
 {
-    boolean isOfflineModeEnabled = false
+    boolean isOfflineModeEnabled = defaultValue
 
     def res = parseMIAPIFile()
 
@@ -425,7 +425,7 @@ boolean isOfflineModeEnabled()
     return isOfflineModeEnabled
 }
 
-boolean isDefaultLanguageOnlySet(defaultValue)
+boolean isDefaultLanguageOnlySet( defaultValue )
 {
     boolean isDefaultLanguageOnlySet = defaultValue
 
@@ -451,7 +451,7 @@ boolean isDefaultLanguageOnlySet(defaultValue)
     return isDefaultLanguageOnlySet
 }
 
-boolean isRoutingEnabled(defaultValue)
+boolean isRoutingEnabled( defaultValue )
 {
     boolean isOfflineRoutingEnabled = defaultValue
 
@@ -477,7 +477,7 @@ boolean isRoutingEnabled(defaultValue)
     return isOfflineRoutingEnabled
 }
 
-boolean areOfflineTilesEnabled(defaultValue)
+boolean areOfflineTilesEnabled( defaultValue )
 {
     boolean areOfflineTilesEnabled = defaultValue
 
@@ -503,7 +503,7 @@ boolean areOfflineTilesEnabled(defaultValue)
     return areOfflineTilesEnabled
 }
 
-boolean areOfflineLocationsDataEnabled(defaultValue)
+boolean areOfflineLocationsDataEnabled( defaultValue )
 {
     boolean areOfflineLocationsEnabled = defaultValue
 
