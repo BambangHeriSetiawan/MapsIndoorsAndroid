@@ -16,7 +16,7 @@ def mi_APIKey = ''
 // Offline (embedded) data constants
 ext {
 
-    SHOW_DEBUG_INFO = false
+    SHOW_DEBUG_INFO = true
 
     // These reflect the settings in mapsindoors_api.xml
     enableOfflineMode = true
